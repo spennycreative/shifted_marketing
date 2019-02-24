@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,400i,700,700i');
+// setting fonts
+
+$font__main-heading: 'Rock Salt', cursive;
+// $font__secondary-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font__secondary-heading: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+$font__body-light: 'Titillium Web', sans-serif;
+$font__body-bold: 'Titillium Web', sans-serif, 700;
+$font__body-bold-italics: 'Titillium Web', sans-serif, 700, italic;
+
+h1,h2 {
+  font-family: $font__main-heading;
+}
+
+h3,h4,h5,h6,.footer-top-menu-item a {
+  font-family: $font__secondary-heading;
+}
+
+p, a, li, ul {
+  font-family: $font__body-light;
+}
+
+.sub-menu li a {
+  font-family: $font__body-light;
+}
+
+// i {
+//   font-family: $font__body-light-italics;
+// }
+
+em {
+  font-family: $font__body-bold-italics;
+}
+
+strong {
+  font-family: $font__body-bold !important;
+}
+
+
+//blog styles
+
+article {
+
+  h1,
+  h2 {
+    font-family: $font__main-heading !important;
+
+    a {
+      text-decoration: none;
+      border: none;
+      font-family: $font__main-heading !important;
+    }
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font__secondary-heading;
+
+    a {
+      text-decoration: none !important;
+      font-family: $font__secondary-heading !important;
+    }
+  }
+
+  p {
+    font-family: $font__body-light !important;
+
+    a {
+      font-family: $font__body-light !important;
+    }
+  }
+
+  strong {
+    font-family: $font__body-bold !important;
+  }
+}
+
+// setting font sizes
+
+h1 {
+  font-size: 32px;
+  line-height: 1;
+  margin: auto;
+
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 42px
+  }
+  @media screen and (min-width: 1240px) {
+    font-size: 46px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1;
+  margin: auto;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 1240px) {
+    font-size: 32px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1;
+  margin: auto;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1240px) {
+    font-size: 28px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1;
+  margin: auto;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1240px) {
+    font-size: 22px;
+  }
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.3;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,102 @@
+.layout__content-cta {
+
+  .layout__content-container {
+    width: 100%;
+    margin: 25px auto;
+    padding: 0 15px;
+
+    @media screen and (min-width: 768px) {
+      margin: auto;
+      width: 50%;
+      padding: 0 15px;
+    }
+  }
+
+  .layout__cta-container {
+    width: 100%;
+    margin: 25px auto;
+
+    @media screen and (min-width: 768px) {
+      margin: auto;
+      width: 50%;
+      padding-right: 15px;
+    }
+
+    :first-child {
+      .layout__cta {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+
+    :last-child {
+      .layout__cta {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      height: 100%;
+      width: 100%;
+      font-weight: bold;
+      color: $color__branding-navy;
+
+      .layout__cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: white;
+        border: 1px solid #cecece;
+        padding: 10px 20px;
+        margin: -1px 10px;
+
+        img {
+          height: 65px;
+          width: auto;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        margin: -1px auto 0 auto;
+
+        img {
+          transition: transform .25s ease-out;
+        }
+
+        &:hover {
+          transition: all .2s ease-in;
+          color: $color__branding-black;
+
+          .layout__cta {
+            box-shadow: 0 0 15px -9px rgba(0,0,0,.95);
+            // background-color: $color__branding-primary-powder;
+            transform: scale(1.0375);
+            transition: transform .275s cubic-bezier(0.93, 0.4, 0.39, 1.39);
+            
+            span {
+              // color: white;
+            }
+
+            img {
+              transform: scale(1.15);
+              transition: transform .25s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.row {
+  @media screen and (min-width: 1000px) {
+    flex-direction: row !important;
+  }
+}
+
+.row-reverse {
+  @media screen and (min-width: 1000px) {
+    flex-direction: row-reverse !important;
+  }
+}

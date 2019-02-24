@@ -1,0 +1,33 @@
+.d-flex {
+  display: flex;
+}
+
+.df-row {
+  flex-direction: row;
+}
+  .df-row-reverse {
+    flex-direction: row-reverse;
+  }
+  .df-row-md-up {
+    @media screen and (min-width: 768px) {
+      flex-direction: row !important;
+    }
+  }
+
+// columns
+.df-column {
+  flex-direction: column;
+}
+  .df-column-reverse {
+    flex-direction: column-reverse;
+  }
+  .df-column-md-up {
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+.centered {
+  justify-content: center;
+  align-items: center;
+}

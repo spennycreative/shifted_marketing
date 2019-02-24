@@ -1,0 +1,509 @@
+/*----------------------------------------------------------------
+
+TABLE OF CONTENTS
+
+#1 -- NON Stickey Navigation
+#2 -- headroom -- sticky navigation
+#3 -- Desktop Navigation
+#4 -- Mobile Navigation
+#5 -- Helpers
+
+** If you have any questions regarding the following code, please 
+reach out to **Spencer Green -- Agency Team**
+
+------------------------------------------------------------------*/
+
+
+/*
+*
+*   #1 -- NON Stickey Navigation
+*
+*/
+
+
+.top-nav-non-sticky {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+
+    .site-branding {
+        display: flex;
+
+        img {
+            height: 35px;
+            width: auto;
+
+            @media screen and (max-width: 600px) {
+                min-width: auto;
+            }
+            @media screen and (max-width: 400px) {
+                height: 30px;
+            }
+            @media screen and (max-width: 320px) {
+                height: 25px;
+            }
+        }
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+
+        .icon-container {
+            padding: 0 3px;
+
+            a {
+                // transition: all .3s ease-in-out;
+
+                img {
+                    height: 50px;
+                    width: auto;
+                    transition: all .4s ease-out;
+
+                    &:hover {
+                        transition: all .2s ease-in;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+/*
+*
+*   #2 -- headroom -- sticky navigation
+*
+*/
+
+
+.headroom {
+    will-change: transform;
+    position: fixed;
+    z-index: 15;
+    width: 100%;
+    top: 75px;
+
+    .site-branding {
+        display: none;
+    }
+}
+
+.headroom--top {
+    top: 75px !important;
+    box-shadow: none !important;
+
+    .site-branding {
+        display: none !important;
+    }
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+    top: 0;
+    box-shadow: 0 9px 25px -13px rgba(0,0,0,.675);
+
+    .site-branding {
+        display: none;
+    }
+}
+
+.headroom--unpinned {
+    transform: translateY(-300%);
+}
+
+
+/*
+*
+*   #3 -- Desktop Navigation
+*
+*/
+
+.menu-main-menu-container {
+  height: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1285px;
+    // height: 75px;
+    height: 50px;
+    margin: auto 10px;
+
+    @media screen and (min-width: 1200px) {
+        margin: auto;
+    }
+
+    .main-navigation {
+        height: 100%;
+        width: auto;
+        position: relative;
+        top: -13px;
+
+        @media screen and (min-width: 900px) {
+            .menu {
+                height: 100%;
+
+                ul {
+                    display: flex;
+                    margin: 0 auto;
+                    height: 100%;
+
+                    li {
+                        list-style-type: none;
+                        margin: 25px 3px 0 3px;
+                        padding: 0 15px;
+                        transition: all .3s cubic-bezier(1, 0.64, 0.34, 1.22);
+
+                        &:hover {
+                            transition: all .3s ease-in-out;
+                            
+                            #carrot-rotate {
+                                top: -30px;
+                                color: $color__branding-primary-orange;
+
+                                #carrot {
+                                    transition: all .3s cubic-bezier(1, 0.64, 0.34, 1.22);
+                                    transform: rotate(180deg) !important;
+                                    position: absolute;
+                                }
+                            }
+                        }
+
+                        a {
+                            letter-spacing: 1px;
+                            border-bottom: 1px solid #ededed;
+
+                                &:hover {
+                                    transition: all .1875s ease-in;
+                                    border-bottom: 3px solid white;
+                                }
+                            }
+                        }
+
+                        .sub-menu {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 13px;
+                            padding: 15px 0;
+                            height: auto;
+                            width: auto;
+                            min-width: 175px;
+                            background-color: white;
+                            border: none !important;
+                            box-shadow: 0 5px 20px -5px rgba(0,0,0,.75);
+
+                            &::before {
+                                position: absolute;
+                                height: auto;
+                                width: 18px;
+                                top: -16px;
+                                left: 25px;
+                                z-index: 99;
+                                content: url(../../color-themes/up.svg); 
+                            }
+
+                            li {
+                                width: 100%;
+                                height: auto;
+                                margin: 5px 0;
+                                
+                                a {
+                                    display: block;
+                                    font-weight: normal;
+                                    padding: 2px 10px;
+                                    color: #0a0a0a !important;
+                                    width: 100%;
+                                    border: none;
+                                    border-radius: 5px;
+                                    transition: all .2s ease-out;
+
+                                    &:hover {
+                                        background-color: $color__branding-primary-orange;
+                                        transition: all .2s ease-in;
+                                        color: white !important;
+                                        border: none;
+                                    }
+
+                                    &:focus {
+                                        opacity: .6;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    .header-cta {
+        a.header-btn {
+            margin: auto;
+
+            @media screen and (max-width: 375px) {
+                font-size: 0.8em;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+#carrot-rotate {
+    color: #fff;
+    position: relative;
+    transform: translateX(100%);
+    left: 5px;
+    top: -25px;
+    transition: all .3s ease-in-out;
+
+    #carrot {
+        font-size: 25px;
+        // transition: all .3s ease-in-out;
+    }
+}
+
+
+/*
+*
+*   #4 -- Mobile Navigation
+*
+*/
+
+@media screen and (max-width: 900px) {
+    #mobile-primary-menu {
+        #mobile-hb-button {
+            display: block;
+            position: relative;
+            top: 25px;
+            left: 25px;
+            z-index: 1;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            input:checked ~ ul.menu {
+                transform: none !important;
+                box-shadow: 5px 0 25px -2px rgba(0,0,0,.25);
+            }
+
+            input {
+                display: block;
+                width: 40px;
+                height: 32px;
+                position: absolute;
+                top: -7px;
+                left: -5px;
+                cursor: pointer;
+                opacity: 0;
+                z-index: 2;
+                // -webkit-touch-callout: none;
+
+                &:checked ~ span {
+                    opacity: 1;
+                    top: -5px;
+                    transform: rotate(45deg) translate(11px, 0px); // X
+                    // transform: rotate(0deg) translate(-5px, 16px); //plug sign
+                    background: black;
+                }
+
+                &:checked ~ span:nth-last-child(3) {
+                    opacity: 0;
+                    transform: rotate(0deg) scale(0.2, 0.2);
+                }
+
+                &:checked ~ span:nth-last-child(2) {
+                    top: -5px;
+                    transform: rotate(-45deg) translate(0, 0); // X
+                    // transform: rotate(90deg) translate(0, 3px); //plus sign
+                }
+            }
+
+            span {
+                display: block;
+                width: 35px;
+                height: 4px;
+                margin-bottom: 5px;
+                position: relative;
+                background: #f6f7f6;
+                border-radius: 5px;
+                z-index: 1;
+                transform-origin: 4px 0px;
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                            opacity 0.55s ease;
+
+                &:first-child {
+                    transform-origin: 0% 0%;
+                }
+                &:nth-last-child(2) {
+                    transform-origin: 50% 0;
+                }
+            }
+        }
+
+        // .menu-main-menu-container {
+            ul.menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                position: absolute;
+                width: 350px;
+                height: 100vh;
+                margin: 23px 0 0 -35px;
+                padding: 20px;
+                background: #ededed;
+                list-style-type: none;
+                -webkit-font-smoothing: antialiased;
+                transform-origin: 0% 0%;
+                /* to stop flickering of text in safari */
+                transform-origin: 0% 0%;
+                transform: translate(-100%, 0);
+                transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+                @media screen and (max-width: 320px) {
+                    width: 300px;
+                    margin: 23px 0 0 -45px;
+                }
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    list-style: none;
+                    width: auto;
+                    max-width: 300px;
+                    padding: 10px;
+                    margin: 5px auto;
+                    font-size: 1rem;
+                    border: 1px solid rgba(0, 0, 0, 0.5);
+                    border-radius: 3px;
+
+                    @media screen and (max-width: 320px) {
+                        max-width: 250px;
+                        padding: 10px;
+                        margin: 3px;
+                    }
+
+                    a {
+                        display: flex;
+                        justify-content: flex-start;
+                        padding: 2px;
+                        width: auto;
+                        min-width: 300px;
+                        color: #0a0a0a !important;
+
+                        &:after {
+                            position: absolute;
+                            right: 40px;
+                            content: '>';
+                        }
+                    }
+
+                    //sub-menu
+                    ul.sub-menu {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        height: auto;
+                        width: 100%;
+                        transform: none;
+                        margin: auto;
+                        padding: 0 0 0 10px;
+                        box-shadow: none !important;
+
+                        li {
+                            display: flex;
+                            justify-content: flex-start;
+                            border: none;
+                            padding: 1px;
+                            // padding: 0;
+                            margin: 0;
+
+                            a {
+                                display: flex;
+                                justify-content: flex-start;
+
+                                &:before {
+                                    padding-right: 5px;
+                                    content: '- ';
+                                }
+                                &:after {
+                                    content: ' ';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        // }
+    }
+}
+
+
+/*
+*
+*   #5 -- Helpers
+*
+*/
+
+
+// main {
+//     //primary content needed to be pushed down due to the headroom
+//     margin-top: 8em;
+//     @media screen and (min-width: 800px) {
+//         margin-top: 6em;
+//     }
+// }
+
+@media screen and (min-width: 900px) {
+    .current-menu-item > a {
+        border-bottom: 3px solid $color__branding-primary-orange !important;
+    }
+    .sub-menu > .current-menu-item a {
+        transition: all .3s ease-in-out;
+        background-color: $color__branding-primary-orange;
+        border-bottom: none !important;
+        box-shadow: 0 0 15px -2px rgba(0,0,0,.25);
+        border-bottom: none !important;
+    }
+}
+
+#mobile-primary-menu {
+   display: block;
+
+   ul > .current-menu-item > a {
+       text-decoration: underline !important;
+       color: $color__branding-primary-orange !important;
+       border: none !important;
+   }
+
+   .sub-menu > .current-menu-item > a {
+       color: $color__branding-primary-orange !important;
+       border: none !important;
+   }
+
+   @media screen and (min-width: 900px)  {
+       display: none;
+   }
+}
+
+#primary-menu {
+    display: none;
+
+    @media screen and (min-width: 900px)  {
+        display: block;
+    }
+}

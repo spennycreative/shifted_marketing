@@ -1,0 +1,75 @@
+.post-navigation {
+  margin: 25px auto;
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 1140px;
+
+    .nav-previous {
+      a {
+        text-shadow: 0 1px 1px $color__branding-almost-black;
+        font-size: .9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color__branding-white;
+        background-color: $color__branding-primary-orange;
+        padding: 8px 45px;
+        border: 1px solid $color__branding-primary-orange-outline;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px -3px $color__branding-box-shadow-md;
+
+        @media screen and (min-width: 768px) {
+          transition: all .2s ease-out;
+
+          &:hover {
+            transition: all .2s ease-in;
+            color: $color__branding-white;
+            background-color: $color__branding-primary-orange-outline;
+            border: 1px solid $color__branding-primary-orange;
+            box-shadow: 0 6px 6px -4px $color__branding-box-shadow-lg;
+          }
+        }
+
+        &:before {
+          content: '< ';
+        }
+      }
+    }
+    .nav-next {
+
+      a {
+        font-size: .9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color__branding-primary-powder;
+        background-color: $color__branding-white;
+        padding: 8px 45px;
+        border: 1px solid $color__branding-primary-powder-outline;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px -3px $color__branding-box-shadow-md;
+
+        @media screen and (min-width: 768px) {
+          transition: all .2s ease-out;
+
+          &:hover {
+            transition: all .2s ease-in;
+            color: $color__branding-white;
+            background-color: $color__branding-primary-powder-hover;
+            border: 1px solid $color__branding-primary-powder;
+            box-shadow: 0 6px 6px -4px $color__branding-box-shadow-lg;
+          }
+        }
+
+        &:after {
+          content: ' >';
+        }
+      }
+    }
+  }
+}

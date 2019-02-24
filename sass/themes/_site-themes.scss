@@ -1,0 +1,30 @@
+.theme {
+    background-size: cover;
+    background-position: bottom;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0px 0px 50px -10px black;
+
+  &__default {
+    background-image: url('../../color-themes/default.svg');
+  }
+  &__seo {
+    background-size: auto !important;
+    background-image: url('../../color-themes/seo.svg');
+  }
+  &__marketing {
+
+  }
+  &__development {
+    background-image: url('../../color-themes/development.svg');
+  }
+  &__analytics {
+    background-size: auto !important;
+    background-image: url('../../color-themes/analytics.svg');
+  }
+  &__design {
+    background-image: url('../../color-themes/design.svg');
+  }
+}

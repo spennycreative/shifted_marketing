@@ -1,0 +1,111 @@
+.layout--case-studies {
+
+  div {
+
+    .layout--case-studies-intro {
+      margin: 8px 2.5%;
+      text-align: center;
+
+      p {
+        line-height: 1;
+      }
+    }
+
+    .case-study-container {
+      flex-wrap: wrap;
+
+      article {
+        width: 100%;
+        margin: auto;
+        padding: 0 15px;
+
+        @media screen and (min-width: 768px) {
+          width: 50%;
+
+          &:hover {
+            .case-study-bg-img {
+              // transition: all .2s ease-in;
+              transition: all .2s cubic-bezier(1, 0.07, 0, 0.82);
+              transform: scale(1.02);
+              box-shadow: 0 -10px 16px -12px rgba(0,0,0,.95);
+            }
+            .case-study-wrapper {
+              transition: all .2s cubic-bezier(1, 0.07, 0, 0.82);
+              transform: scale(.9);
+            }
+          }
+        }
+
+        .case-study-bg-img {
+          position: relative;
+          margin: auto;
+          height: 240px;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 10px;
+
+          @media screen and (min-width: 768px) {
+            transition: all .2s ease-out;
+            border: 1px solid rgba(255,255,255,.6);
+          }
+
+          img {
+            position: absolute;
+          }
+        }
+
+        .case-study-info {
+          height: 0;
+          position: relative;
+          z-index: 1;
+          margin-bottom: 100px;
+
+          .case-study-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 20px 10px;
+            max-width: 300px;
+            margin: auto;
+            position: relative;
+            top: -155px;
+            box-shadow: 0 6px 12px -3px rgba(0,0,0,.5);
+            border-radius: 5px;
+
+            @media screen and (min-width: 768px) {
+              top: -145px;
+              transition: all .2s ease-out;
+            }
+            @media screen and (min-width: 1024px) {
+              top: -135px;
+            }
+            @media screen and (min-width: 1140px) {
+              top: -125px;
+            }
+
+            img {
+              height: 50px;
+              width: auto;
+              margin-bottom: 10px;
+            }
+
+            // h4 {
+            //   line-height: 1;
+            // }
+
+            span {
+              font-size: 14px;
+              margin-top: -22px;
+            }
+
+            a {
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

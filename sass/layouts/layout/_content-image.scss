@@ -1,0 +1,107 @@
+.layout--content-image-wrapper {
+  height: auto;
+}
+
+.content-image-container {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 1000px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.content-image-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  max-width: 500px;
+  margin: auto;
+  padding: 0 15px;
+
+  @media screen and (max-width: 1000px) {
+    order: 2;
+  }
+  
+  .date-of-tour {
+    position: relative;
+    color: $color__branding-primary-teal;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 1.875em;
+    margin: 5px auto 20px auto;
+  }
+
+  p {
+    margin-bottom: 2.5em;
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: 50%;
+    min-height: 600px;
+
+    h2 {
+      font-size: 2.2em;
+      margin: 20px 0;
+      line-height: 1;
+    }
+
+    p {
+      margin: -10px 0 35px 0;
+    }
+
+    // .button-wrapper {
+    //   margin-left: -10px;
+    // }
+  }
+}
+
+.content-image {
+    min-height: 500px;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-size: contain;
+
+    @media screen and (max-width: 1000px) {
+      order: 1;
+      min-height: 350px;
+    }
+
+    @media screen and (min-width: 1000px) {
+      width: 50%;
+      min-height: 600px;
+  }
+}
+
+.row {
+  @media screen and (min-width: 1000px) {
+    flex-direction: row !important;
+  }
+}
+
+.row-reverse {
+  @media screen and (min-width: 1000px) {
+    flex-direction: row-reverse !important;
+  }
+} 
+
+
+.outside-box-shadow {
+  box-shadow: 30px 30px 100px -30px black;
+}
+
+.outside-box-shadow-reverse {
+  box-shadow: -30px 30px 100px -30px black;
+}
+
+.inside-box-shadow {
+  box-shadow: -30px 30px 100px -30px black;
+}
+
+.inside-box-shadow-reverse {
+  box-shadow: 30px 30px 100px -30px black;
+}

@@ -1,0 +1,75 @@
+/*---------------------------------------------
+Table of Contents
+===============================================
+
+1. breakpoints
+2. sections
+----------------------------------------------*/
+
+
+/*--------------------------------------------
+1. breakpoints
+----------------------------------------------*/
+
+$sm: 768px;
+$md: 984px;
+$lg: 1280px;
+$xl: 1400px;
+
+
+/*--------------------------------------------
+2. sections
+----------------------------------------------*/
+
+.layout {
+  // max-width: 1140px;
+  max-width: 1285px;
+  margin: auto;
+  padding: 50px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 62px 0;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 75px 0;
+  }
+}
+
+#main {
+  margin-top: 4em;
+
+  @media screen and (min-width: 375px) {
+    margin-top: 2em;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 1em;
+  }
+  @media screen and (min-width: 900px) {
+    margin-top: auto;
+  }
+}
+
+.edit-link {
+  a {
+    z-index: 4;
+    text-decoration: none;
+    position: absolute;
+    color: white;
+    border: 2px solid white;
+    border-radius: 2px;
+    background-color: orange;
+    min-width: 100px;
+    text-align: center;
+    padding: 3px;
+    font-size: 1.3em;
+    left: 50%;
+    margin-top: -22px;
+    transform: translateX(-50%);
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transition: all .2s ease-in-out;
+        box-shadow: 0 10px 15px -4px black;
+    }
+  }
+}

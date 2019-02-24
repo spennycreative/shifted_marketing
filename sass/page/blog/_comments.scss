@@ -1,0 +1,18 @@
+.comments-area {
+
+  @media screen and (max-width: 1000px) {
+    width: 95%;
+    margin: auto;
+  }
+
+  .comments-respond {
+
+    // #reply-title {
+    //   margin-bottom: -20px !important;
+    // }
+
+    form {
+      margin-top: -25px;
+    }
+  }
+}

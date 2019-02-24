@@ -1,0 +1,94 @@
+.header-btn {
+  text-shadow: 0 1px 1px $color__branding-almost-black;
+  font-size: .9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color__branding-white;
+  background-color: $color__branding-primary-orange;
+  padding: 8px 45px;
+  border: 1px solid $color__branding-primary-orange-outline;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px -3px $color__branding-box-shadow-md;
+
+  @media screen and (min-width: 768px) {
+    transition: all .2s ease-out;
+
+    &:hover {
+      transition: all .2s ease-in;
+      color: $color__branding-white;
+      background-color: $color__branding-primary-orange-outline;
+      border: 1px solid $color__branding-primary-orange;
+      box-shadow: 0 6px 6px -4px $color__branding-box-shadow-lg;
+    }
+  }
+
+  &:visited {color:$color__branding-light-grey;}
+  &:focus {opacity: .6;}
+}
+
+
+.primary-btn {
+  font-size: .9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color__branding-primary-powder;
+  background-color: $color__branding-white;
+  padding: 8px 45px;
+  border: 1px solid $color__branding-primary-powder-outline;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px -3px $color__branding-box-shadow-md;
+
+  @media screen and (min-width: 768px) {
+    transition: all .2s ease-out;
+
+    &:hover {
+      transition: all .2s ease-in;
+      color: $color__branding-white;
+      background-color: $color__branding-primary-powder-hover;
+      border: 1px solid $color__branding-primary-powder;
+      box-shadow: 0 6px 6px -4px $color__branding-box-shadow-lg;
+    }
+  }
+
+  &:visited {color:$color__branding-mid-grey;}
+  &:focus {opacity: .6;}
+}
+
+.secondary-btn {
+  text-shadow: 0 1px 1px $color__branding-almost-black;
+  font-size: .9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color__branding-white;
+  background-color: $color__branding-primary-orange;
+  padding: 8px 45px;
+  border: 1px solid $color__branding-primary-orange-outline;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px -3px $color__branding-box-shadow-md;
+
+  @media screen and (min-width: 768px) {
+    transition: all .2s ease-out;
+
+    &:hover {
+      transition: all .2s ease-in;
+      color: $color__branding-white;
+      background-color: $color__branding-primary-orange-outline;
+      border: 1px solid $color__branding-primary-orange;
+      box-shadow: 0 6px 6px -4px $color__branding-box-shadow-lg;
+    }
+  }
+
+  &:visited {color:$color__branding-light-grey;}
+  &:focus {opacity: .6;}
+}
+
+a {
+  color: $color__branding-primary-teal;
+}
+
+
+// .secondary-dark
+// .secondary-light
